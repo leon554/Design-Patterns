@@ -1,0 +1,491 @@
+{
+    "vertebrates": [
+        {
+            "species": "Australian Bass",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Estuary Perch",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Australian Salmon",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Blue Drummer",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Bonito",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Bream (Black/Southern)",
+            "size_limit_cm": [25, 9999],
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Bream (Yellowfin)",
+            "size_limit_cm": [25, 9999],
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Tarwhine",
+            "size_limit_cm": [20, 9999],
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Cobia",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Hapuku (Hapuka)",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Banded Rock Cod (Bar Cod)",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Bass Groper",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Gemfish",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Blue-Eye Trevalla (Cod)",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Dogfish (Harrisson's)",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Dogfish (Southern)",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Dogfish (All other)",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Eastern Blue Groper",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Mahi Mahi (Dolphinfish)",
+            "size_limit_cm": [60, 9999],
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Eel (Southern Shortfin)",
+            "size_limit_cm": [30, 9999],
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Eel (Longfin)",
+            "size_limit_cm": [58, 9999],
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Flathead (Dusky)",
+            "size_limit_cm": [36, 70],
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Flathead (Bluespotted)",
+            "size_limit_cm": [33, 9999],
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Flathead (Tiger)",
+            "size_limit_cm": [33, 9999],
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Flounder",
+            "size_limit_cm": [25, 9999],
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Sole",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Garfish (Eastern Sea)",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Hairtail",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Leatherjacket",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Luderick",
+            "size_limit_cm": [27, 9999],
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Mackerel (Spanish)",
+            "size_limit_cm": [75, 9999],
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Mackerel (Spotted)",
+            "size_limit_cm": [60, 9999],
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Mangrove Jack",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Marlin (Striped)",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Marlin (Black)",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Marlin (Blue)",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Morwong (Grey/Rubberlip)",
+            "size_limit_cm": [30, 9999],
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Morwong (Jackass)",
+            "size_limit_cm": [30, 9999],
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Morwong (Red)",
+            "size_limit_cm": [30, 9999],
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Morwong (Banded)",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Moses Snapper (Moses Perch)",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Mullet (Poddy/Small)",
+            "size_limit_cm": [0, 15],
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Mullet (Sea/Bully)",
+            "size_limit_cm": [30, 9999],
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Mulloway",
+            "size_limit_cm": [70, 9999],
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Pearl Perch",
+            "size_limit_cm": [30, 9999],
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Eastern Red Scorpionfish (Red Rock Cod)",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Rock Blackfish (Black Drummer)",
+            "size_limit_cm": [30, 9999],
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Sailfish",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Samsonfish",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Amberjack",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Australian Sawtail",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Shark (Wobbegong)",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Shark (Mako)",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Shark (School)",
+            "size_limit_cm": [91, 9999],
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Shark (Whaler)",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Snapper",
+            "size_limit_cm": [30, 9999],
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Spearfish (Shortbill)",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Swordfish",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Tailor",
+            "size_limit_cm": [30, 9999],
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Teraglin",
+            "size_limit_cm": [38, 9999],
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Trevallies (Silver Trevally)",
+            "size_limit_cm": [30, 9999],
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Trevallies (all other)",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Tuna (Albacore)",
+            "size_limit_cm": [90, 9999],
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Tuna (Bigeye)",
+            "size_limit_cm": [90, 9999],
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Tuna (Longtail)",
+            "size_limit_cm": [90, 9999],
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Tuna (Yellowfin)",
+            "size_limit_cm": [90, 9999],
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Tuna (Southern Bluefin)",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Wahoo",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Whiting (Sand)",
+            "size_limit_cm": [27, 9999],
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Yellowtail Kingfish",
+            "size_limit_cm": [65, 9999],
+            "must_return_if_carrying_eggs": false
+        }
+    , 9999],
+    "invertebrates": [
+        {
+            "species": "Abalone",
+            "size_limit_cm": [11.7, 9999],
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Balmain Bug",
+            "size_limit_cm": [10, 9999],
+            "must_return_if_carrying_eggs": true
+        },
+        {
+            "species": "Beach Worms",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "All other worms",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Cockles",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Mussels",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Pipis",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Crab (Blue Swimmer)",
+            "size_limit_cm": [6.5, 9999],
+            "must_return_if_carrying_eggs": true
+        },
+        {
+            "species": "Crab (Mud)",
+            "size_limit_cm": [8.5, 9999],
+            "must_return_if_carrying_eggs": true
+        },
+        {
+            "species": "Crab (Spanner)",
+            "size_limit_cm": [9.3, 9999],
+            "must_return_if_carrying_eggs": true
+        },
+        {
+            "species": "Crab (Soldier)",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": true
+        },
+        {
+            "species": "All other crabs",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": true
+        },
+        {
+            "species": "Cunjevoi",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Lobster (Eastern Rock)",
+            "size_limit_cm": [10.4, 18],
+            "must_return_if_carrying_eggs": true
+        },
+        {
+            "species": "Lobster (Southern Rock) male",
+            "size_limit_cm": [11, 9999],
+            "must_return_if_carrying_eggs": true
+        },
+        {
+            "species": "Lobster (Southern Rock) female",
+            "size_limit_cm": [10.5, 9999],
+            "must_return_if_carrying_eggs": true
+        },
+        {
+            "species": "Tropical Rock Lobster (Painted and Ornate)",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": true
+        },
+        {
+            "species": "Slipper Lobster (Flat)",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": true
+        },
+        {
+            "species": "Octopus",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Oysters (Sydney Rock, Pacific, Native)",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Prawns",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Saltwater Nippers",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Scallops",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Sea Urchins",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Squid & Cuttlefish",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Turban Snails (Sydney, Military)",
+            "size_limit_cm": [7.5, 9999],
+            "must_return_if_carrying_eggs": false
+        },
+        {
+            "species": "Turban Snails (all other molluscs)",
+            "size_limit_cm": null,
+            "must_return_if_carrying_eggs": false
+        }
+    ]
+}
