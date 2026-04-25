@@ -4,6 +4,6 @@
 
 class VertebrateCreature: public SeaCreature{
     public: 
-        VertebrateCreature(std::string name, int length, bool hasEggs);
-        bool canKeep() override;
+        VertebrateCreature(std::string specie, int length, bool hasEggs);
+        std::string getType() override;
 };

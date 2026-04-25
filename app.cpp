@@ -4,6 +4,7 @@
 #include <iostream>
 #include <ostream>
 using namespace std;
+//crl + alt + n to run
 
 int main() {
     cout << "Hello, World!" << endl;
@@ -24,7 +25,7 @@ int main() {
         restart = cf->getCreatureType();
         if(restart) continue;
 
-        restart = cf->getCreatureName();
+        restart = cf->getCreatureSpecie();
         if(restart) continue;
 
         restart = cf->getCreatureLength();
@@ -33,6 +34,8 @@ int main() {
         restart = cf->getCreatureEggStatus();
         if(restart) continue;
 
+        cf->buildCreature();
+        
         restart = cf->canKeepCreature();
     }
 

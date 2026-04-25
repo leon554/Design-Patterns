@@ -3,11 +3,10 @@
 
 class SeaCreature {
     public:
-        std::string name;
+        std::string specie;
         int length;
         bool hasEggs;
 
         SeaCreature(std::string name, int length, bool hasEggs);
-
-        virtual bool canKeep() = 0;
+        virtual std::string getType() = 0;
 };
