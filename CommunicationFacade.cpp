@@ -7,9 +7,9 @@
 #include "headerFiles/Angler.h"
 #include "headerFiles/AnglerEngine.h"
 
-CommunicationFacade::CommunicationFacade(SeaPlusPlusEngine* engine, AnglerEngine* anglerEngine){
-    this->engine = engine;
-    this->anglerEngine = anglerEngine;
+CommunicationFacade::CommunicationFacade(){
+    this->engine = new SeaPlusPlusEngine();
+    this->anglerEngine = new AnglerEngine();
 }
 
 void CommunicationFacade::printInstructions() {
@@ -233,7 +233,7 @@ void CommunicationFacade::addCreatureToBag(){
     anglerEngine->addCatch(engine->getCreature());
 }
 
-bool CommunicationFacade::checkBag(){
+void CommunicationFacade::checkBag(){
     if(anglerEngine->canKeepBag()){
         std::cout << "--------------------------------------------------" << std::endl;
         std::cout << "Congratulations you can keep all the fish currently in your bag!" << std::endl;

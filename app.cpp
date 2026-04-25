@@ -1,12 +1,9 @@
-#include "headerFiles/AnglerEngine.h"
 #include "headerFiles/CommunicationFacade.h"
 #include "headerFiles/SeaPlusPlusEngine.h"
 
 int main() {
   
-    SeaPlusPlusEngine* engine = new SeaPlusPlusEngine();
-    AnglerEngine* anglerEngine = new AnglerEngine();
-    CommunicationFacade* cf = new CommunicationFacade(engine, anglerEngine);
+    CommunicationFacade* cf = new CommunicationFacade();
 
     cf->printInstructions();
     
@@ -32,8 +29,6 @@ int main() {
         cf->checkBag();
 
     }
-
-    delete engine;
     delete cf;
 
     return 0;

@@ -5,7 +5,7 @@
 
 class CommunicationFacade{
     public:
-        CommunicationFacade(SeaPlusPlusEngine* engine, AnglerEngine* anglerEngine);
+        CommunicationFacade();
         void printInstructions();   
         bool setAngler();
         bool getCreatureType();
@@ -14,7 +14,7 @@ class CommunicationFacade{
         bool getCreatureEggStatus();
 
         void addCreatureToBag();
-        bool checkBag();
+        void checkBag();
         
     private:
         bool checkRestart(std::string input);
