@@ -15,11 +15,19 @@ bool InvertebrateChecker::canKeep(SeaCreature* creature){
     if (creatureRules){
         if(creatureRules->bag_limit == 0) return false;
         bool canCarryEggs = !creatureRules->must_return_if_carrying_eggs;
+
+        if(creatureRules->size_limit_cm.size() == 0){
+            if(canCarryEggs || (!canCarryEggs && !creature->hasEggs)){
+                return true;
+            }else{
+                return false;
+            }
+        }
+
         int maxLength = creatureRules->size_limit_cm[1] == -1 ? INT_MAX : creatureRules->size_limit_cm[1];
         int minLength = creatureRules->size_limit_cm[0];
-
-        if(creatureRules->size_limit_cm.size() == 0 || (creature->length >= minLength && creature->length <= maxLength)){
-            if(canCarryEggs || (!canCarryEggs && !creature->hasEggs)){
+        if(creature->length >= minLength && creature->length <= maxLength){
+             if(canCarryEggs || (!canCarryEggs && !creature->hasEggs)){
                 return true;
             }else{
                 return false;

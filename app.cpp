@@ -1,14 +1,19 @@
+#include "headerFiles/AnglerEngine.h"
 #include "headerFiles/CommunicationFacade.h"
 #include "headerFiles/SeaPlusPlusEngine.h"
 
 int main() {
   
     SeaPlusPlusEngine* engine = new SeaPlusPlusEngine();
-    CommunicationFacade* cf = new CommunicationFacade(engine);
+    AnglerEngine* anglerEngine = new AnglerEngine();
+    CommunicationFacade* cf = new CommunicationFacade(engine, anglerEngine);
 
     while(true){
         bool restart = false;
         cf->printInstructions();
+
+        restart = cf->setAngler();
+        if(restart) continue;
 
         restart = cf->getCreatureType();
         if(restart) continue;
@@ -21,8 +26,11 @@ int main() {
 
         restart = cf->getCreatureEggStatus();
         if(restart) continue;
-
+        
         cf->buildAndCheckCreature();
+        cf->addCreatureToBag();
+        cf->checkBag();
+
     }
 
     delete engine;
