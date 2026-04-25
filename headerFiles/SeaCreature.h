@@ -8,5 +8,6 @@ class SeaCreature {
         bool hasEggs;
 
         SeaCreature(std::string name, int length, bool hasEggs);
+        virtual ~SeaCreature() = default;
         virtual std::string getType() = 0;
 };

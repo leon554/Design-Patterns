@@ -1,22 +1,10 @@
 #include "headerFiles/CommunicationFacade.h"
-#include "headerFiles/SeaCreature.h"
-#include "headerFiles/SeaCreatureFactory.h"
-#include <iostream>
-#include <ostream>
-using namespace std;
-//crl + alt + n to run
+#include "headerFiles/SeaPlusPlusEngine.h"
 
 int main() {
-    cout << "Hello, World!" << endl;
-
-    // SeaCreature* salmon = SeaCreatureFactory::create("Vertebrate", "salmon", 28, true);
-    // SeaCreature* crab = SeaCreatureFactory::create("Invertebrate", "crab", 10,true);
-
-    // cout << "Can keep salmon: " << (salmon->canKeep() ? "[yes]" : "[no]") << endl;
-    // cout << "Can keep crab: " << (crab->canKeep() ? "[yes]" : "[no]") << endl;
-
-    CommunicationFacade* cf = new CommunicationFacade();
-
+  
+    SeaPlusPlusEngine* engine = new SeaPlusPlusEngine();
+    CommunicationFacade* cf = new CommunicationFacade(engine);
 
     while(true){
         bool restart = false;
@@ -34,11 +22,11 @@ int main() {
         restart = cf->getCreatureEggStatus();
         if(restart) continue;
 
-        cf->buildCreature();
-        
-        restart = cf->canKeepCreature();
+        cf->buildAndCheckCreature();
     }
 
+    delete engine;
+    delete cf;
 
     return 0;
 }

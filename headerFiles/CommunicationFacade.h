@@ -1,20 +1,18 @@
 #pragma once
-#include "SeaCreatureBuilder.h"
+#include "SeaPlusPlusEngine.h"
 #include <string>
-
 
 class CommunicationFacade{
     public:
-        CommunicationFacade();
+        CommunicationFacade(SeaPlusPlusEngine* engine);
         void printInstructions();   
         bool getCreatureType();
         bool getCreatureSpecie();
         bool getCreatureLength();
         bool getCreatureEggStatus();
-        bool canKeepCreature();
-        void buildCreature();
+        void buildAndCheckCreature();
     private:
         bool checkRestart(std::string input);
         std::string lowerCaseInput(std::string input);
-        SeaCreatureBuilder* builder;
+        SeaPlusPlusEngine* engine;
 };

@@ -1,14 +1,13 @@
 #include "headerFiles/CommunicationFacade.h"
-#include "headerFiles/SeaCreature.h"
-#include "headerFiles/SeaCreatureBuilder.h"
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
 #include "./headerFiles/db.h"
+#include "headerFiles/SeaCreature.h"
 
-
-CommunicationFacade::CommunicationFacade(){
-    CommunicationFacade::builder = new SeaCreatureBuilder();
+CommunicationFacade::CommunicationFacade(SeaPlusPlusEngine* engine){
+    this->engine = engine;
 }
 
 void CommunicationFacade::printInstructions() {
@@ -39,10 +38,10 @@ bool CommunicationFacade::getCreatureType() {
         };
 
         if (std::find(validInputs.begin(), validInputs.end(), input) != validInputs.end()) {
-            builder->setType((input.find("v") == std::string::npos) ?
+            std::string type = (input.find("v") == std::string::npos) ?
                 "Invertebrate" :
-                "Vertebrate"
-            );
+                "Vertebrate";
+            engine->setCreatureType(type);
             return false;
         }
 
@@ -62,7 +61,7 @@ bool CommunicationFacade::getCreatureSpecie() {
     
     const std::vector<Creature>* list = nullptr;
 
-    std::string type = builder->getType();
+    std::string type = engine->getCreatureType();
     if (type == "Vertebrate") {
         list = &data.vertebrates;
     } else if (type == "Invertebrate") {
@@ -97,7 +96,7 @@ bool CommunicationFacade::getCreatureSpecie() {
 
         if (exists) {
             std::cout << specie << " Selected" << std::endl;
-            builder->setSpecie(specie);
+            engine->setCreatureSpecie(specie);
             return false;
         }
 
@@ -120,7 +119,7 @@ bool CommunicationFacade::getCreatureLength() {
         
         try {
             int length = std::stoi(input);
-            builder->setLength(length);
+            engine->setCreatureLength(length);
             return false;
         } catch (const std::exception& e) {
             std::cout << "Length no valid, enter numbers only";
@@ -146,10 +145,8 @@ bool CommunicationFacade::getCreatureEggStatus() {
         };
 
         if (std::find(validInputs.begin(), validInputs.end(), input) != validInputs.end()) {
-            builder->setHasEggs((input.find("y") == std::string::npos) ?
-                false :
-                true
-            );
+            bool hasEggs = (input.find("y") == std::string::npos) ? false : true;
+            engine->setCreatureHasEggs(hasEggs); 
             return false;
         }
 
@@ -157,24 +154,29 @@ bool CommunicationFacade::getCreatureEggStatus() {
     }
 }
 
-void CommunicationFacade::buildCreature(){
-    SeaCreature* creature = builder->build();
-
+void CommunicationFacade::buildAndCheckCreature(){
+    bool canKeep = engine->buildAndValidateCreature();
+    
     std::cout << "Successfully identified creature..." << std::endl;
 
-    std::cout << creature->getType() 
-        << ", " << 
-        creature->specie <<
-        ", " << 
-        creature->length<<
-        "cm, Has Eggs: " <<
-        (creature->hasEggs ? "Yes" : "No") <<
-    std::endl;
-}
+    std::cout << "--------------------------------------------------" << std::endl;
+    if (canKeep) {
+        std::cout << "You CAN keep the creature show below!" << std::endl;
+        SeaCreature* creature = engine->getCreature();
 
-bool CommunicationFacade::canKeepCreature() {
-    std::cout << "Checking if creature can be kept... (placeholder)" << std::endl;
-    return true;
+        std::cout << 
+            creature->getType() <<
+            ", " <<
+            creature->specie <<
+            ", " <<
+            creature->length <<
+            "cm, Has eggs: " << 
+            (creature->hasEggs ? "Yes" : "No") <<
+        std::endl;
+    } else {
+        std::cout << "You CANNOT keep this creature." << std::endl;
+    }
+    std::cout << "--------------------------------------------------" << std::endl;
 }
 
 bool CommunicationFacade::checkRestart(std::string input) {
