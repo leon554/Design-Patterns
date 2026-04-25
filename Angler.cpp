@@ -17,7 +17,7 @@ std::string Angler::printBag(){
     std::string bagStr = "";
 
     for (SeaCreature* s : bag) {
-        bagStr += s->getType() + ", " + s->specie + ", length: " + std::to_string(s->length) + "cm, Has Eggs: " + (s->hasEggs ? "Yes" : " No");
+        bagStr += s->getType() + ", " + s->specie + ", length: " + std::to_string(s->length) + "cm, Has Eggs: " + (s->hasEggs ? "Yes" : " No") +"\n";
     }
 
     return bagStr;

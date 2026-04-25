@@ -17,7 +17,7 @@ class SeaPlusPlusEngine{
         void setCreatureHasEggs(bool hasEggs);
         std::string getCreatureType();
 
-        bool buildAndValidateCreature();
+        void buildCreature();
         SeaCreature* getCreature();
 
     private:

@@ -16,6 +16,7 @@ class AnglerEngine{
         void createAngler(std::string name);
         void addCatch(SeaCreature* creature);
         void removeCurrentAngler();
+        void clearBag();
         bool canKeepBag();
         int getAnglerCount();
         

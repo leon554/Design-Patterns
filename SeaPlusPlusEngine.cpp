@@ -38,8 +38,6 @@ SeaCreature* SeaPlusPlusEngine::getCreature(){
     return currentCreature;
 }
 
-bool SeaPlusPlusEngine::buildAndValidateCreature(){
+void SeaPlusPlusEngine::buildCreature(){
     currentCreature = builder->build();
-    checker = SeaCheckerFactory::create(currentCreature);
-    return checker->canKeep(currentCreature);  
 }

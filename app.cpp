@@ -8,9 +8,10 @@ int main() {
     AnglerEngine* anglerEngine = new AnglerEngine();
     CommunicationFacade* cf = new CommunicationFacade(engine, anglerEngine);
 
+    cf->printInstructions();
+    
     while(true){
         bool restart = false;
-        cf->printInstructions();
 
         restart = cf->setAngler();
         if(restart) continue;
@@ -26,8 +27,7 @@ int main() {
 
         restart = cf->getCreatureEggStatus();
         if(restart) continue;
-        
-        cf->buildAndCheckCreature();
+
         cf->addCreatureToBag();
         cf->checkBag();
 

@@ -1,8 +1,10 @@
 #pragma once
 #include "SeaCreature.h"
+#include "db.h"
+#include <utility>
 
 class SeaChecker{
     public:
         virtual ~SeaChecker() = default;
-        virtual bool canKeep(SeaCreature* creature) = 0;
+        virtual std::pair<bool, const Creature*> canKeep(SeaCreature* creature) = 0;
 };

@@ -22,6 +22,10 @@ void AnglerEngine::addCatch(SeaCreature* creature){
     anglers->currentAngler->addCatch(creature);
 }
 
+void AnglerEngine::clearBag(){
+    anglers->currentAngler->bag.clear();
+}
+
 std::vector<SeaCreature*> AnglerEngine::viewBag(){
     return anglers->currentAngler->bag;
 }

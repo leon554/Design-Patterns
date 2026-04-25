@@ -1,8 +1,9 @@
 #include "headerFiles/InvertebrateChecker.h"
 #include "headerFiles/SeaCreature.h"
 #include "headerFiles/db.h"
+#include <utility>
 
-bool InvertebrateChecker::canKeep(SeaCreature* creature){
+std::pair<bool, const Creature*> InvertebrateChecker::canKeep(SeaCreature* creature){
     const Creature* creatureRules = nullptr;
 
     for (const auto& c : data.invertebrates){
@@ -13,14 +14,14 @@ bool InvertebrateChecker::canKeep(SeaCreature* creature){
     }
 
     if (creatureRules){
-        if(creatureRules->bag_limit == 0) return false;
+        if(creatureRules->bag_limit == 0) return {false, creatureRules};
         bool canCarryEggs = !creatureRules->must_return_if_carrying_eggs;
 
         if(creatureRules->size_limit_cm.size() == 0){
             if(canCarryEggs || (!canCarryEggs && !creature->hasEggs)){
-                return true;
+                return {true, creatureRules};
             }else{
-                return false;
+                return {false, creatureRules};
             }
         }
 
@@ -28,11 +29,11 @@ bool InvertebrateChecker::canKeep(SeaCreature* creature){
         int minLength = creatureRules->size_limit_cm[0];
         if(creature->length >= minLength && creature->length <= maxLength){
              if(canCarryEggs || (!canCarryEggs && !creature->hasEggs)){
-                return true;
+                return {true, creatureRules};
             }else{
-                return false;
+                return {false, creatureRules};
             }
         }
     }
-    return false;
+    return {false, creatureRules};
 }

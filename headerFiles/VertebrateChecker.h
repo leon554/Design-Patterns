@@ -3,5 +3,5 @@
 
 class VertebrateChecker: public SeaChecker{
     public:
-        bool canKeep(SeaCreature* creature) override;
+        std::pair<bool, const Creature*> canKeep(SeaCreature* creature) override;
 };

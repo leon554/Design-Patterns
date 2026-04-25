@@ -7,13 +7,12 @@ class CommunicationFacade{
     public:
         CommunicationFacade(SeaPlusPlusEngine* engine, AnglerEngine* anglerEngine);
         void printInstructions();   
+        bool setAngler();
         bool getCreatureType();
         bool getCreatureSpecie();
         bool getCreatureLength();
         bool getCreatureEggStatus();
-        void buildAndCheckCreature();
 
-        bool setAngler();
         void addCreatureToBag();
         bool checkBag();
         
